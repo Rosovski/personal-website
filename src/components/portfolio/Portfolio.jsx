@@ -3,10 +3,10 @@ import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import {
   featuredPortfolio,
+  languagePortfolio,
   webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
+  databasePortfolio,
+  toolPortfolio,
 } from "../../data";
 
 export default function Portfolio() {
@@ -15,23 +15,23 @@ export default function Portfolio() {
   const list = [
     {
       id: "featured",
-      title: "Featured",
+      title: "Specialized",
+    },
+    {
+      id: "language",
+      title: "Programming Language",
     },
     {
       id: "web",
-      title: "Web App",
+      title: "Web Development",
     },
     {
-      id: "mobile",
-      title: "Mobile App",
+      id: "database",
+      title: "Database",
     },
     {
-      id: "design",
-      title: "Design",
-    },
-    {
-      id: "content",
-      title: "Content",
+      id: "tool",
+      title: "Tools",
     },
   ];
 
@@ -40,17 +40,17 @@ export default function Portfolio() {
       case "featured":
         setData(featuredPortfolio);
         break;
+      case "language":
+        setData(languagePortfolio);
+        break;
       case "web":
         setData(webPortfolio);
         break;
-      case "mobile":
-        setData(mobilePortfolio);
+      case "database":
+        setData(databasePortfolio);
         break;
-      case "design":
-        setData(designPortfolio);
-        break;
-      case "content":
-        setData(contentPortfolio);
+      case "tool":
+        setData(toolPortfolio);
         break;
       default:
         setData(featuredPortfolio);
@@ -59,7 +59,7 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+      <h1>Skills</h1>
       <ul>
         {list.map((item) => (
           <PortfolioList
@@ -73,10 +73,7 @@ export default function Portfolio() {
       <div className="container">
         {data.map((d) => (
           <div className="item">
-            <img
-              src={d.img}
-              alt=""
-            />
+            <img src={d.img} alt="" />
             <h3>{d.title}</h3>
           </div>
         ))}

@@ -9,18 +9,19 @@
   h1 {
     font-size: 50px;
 
-    @include mobile{
+    @include mobile {
       font-size: 20px;
     }
   }
 
   ul {
     margin: 10px;
+    margin-top: 20px;
     padding: 0;
     list-style: none;
     display: flex;
 
-    @include mobile{
+    @include mobile {
       margin: 10px 0;
       flex-wrap: wrap;
       justify-content: center;
@@ -33,8 +34,9 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 20px;
 
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
 
@@ -49,10 +51,10 @@
       justify-content: center;
       color: white;
       position: relative;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
       cursor: pointer;
 
-      @include mobile{
+      @include mobile {
         width: 130px;
         height: 100px;
       }
